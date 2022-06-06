@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "806448855097",
+    "project_id": "quiz-maker-flutter",
+    "storage_bucket": "quiz-maker-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806448855097:android:52ead85ad97569f7aeb5e8",
+        "android_client_info": {
+          "package_name": "com.shoaib.quiz_maker_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806448855097-gsg1h10um6otlvtsl4sq0pipibgopuje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shoaib.quiz_maker_flutter",
+            "certificate_hash": "72e46809abaf4dd365614e9587bc7969e0d4d6b8"
+          }
+        },
+        {
+          "client_id": "806448855097-ffqv34ouiv7flethtc5kpu0qcfs8or3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZE9AX_lfmthpvsb9WX9AESA7nWZHznig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806448855097-ffqv34ouiv7flethtc5kpu0qcfs8or3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

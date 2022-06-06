@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_maker_flutter/views/home.dart';
 import 'package:quiz_maker_flutter/views/signin.dart';
+import 'package:quiz_maker_flutter/views/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignIn(),
+      initialRoute: SignIn.id,
+      routes: {
+        SignIn.id: (context) => SignIn(),
+        SignUp.id: (context) => SignUp(),
+        Home.id: (context) => Home(),
+      },
     );
   }
 }
