@@ -20,8 +20,7 @@ class Auth {
     }
   }
 
-  Future<FireBaseUser?> signUpWithEmailAndPassword(
-      String email, String password) async {
+  Future signUpWithEmailAndPassword(String email, String password) async {
     try {
       UserCredential _firebaseUserCredential = await _auth
           .createUserWithEmailAndPassword(email: email, password: password);

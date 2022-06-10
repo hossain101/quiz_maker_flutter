@@ -19,8 +19,8 @@ Widget kAppBar(BuildContext context) {
   );
 }
 
-Widget kRoundedButton(BuildContext context, String text) {
-  String _text = text;
+Widget kRoundedButton(BuildContext context, String label) {
+  String _label = label;
   return Container(
     alignment: Alignment.center,
     padding: EdgeInsets.symmetric(
@@ -32,7 +32,7 @@ Widget kRoundedButton(BuildContext context, String text) {
       borderRadius: BorderRadius.circular(20.0),
     ),
     child: Text(
-      _text,
+      _label,
       style: TextStyle(fontSize: 20),
     ),
   );

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_maker_flutter/widgets/widgets.dart';
 
-import 'create_quiz.dart';
+import '../widgets/widgets.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class AddQuestions extends StatefulWidget {
+  const AddQuestions({Key? key}) : super(key: key);
 
-  static String id = 'home';
+  static String id = 'add_questions';
 
   @override
-  State<Home> createState() => _HomeState();
+  State<AddQuestions> createState() => _AddQuestionsState();
 }
 
-class _HomeState extends State<Home> {
+class _AddQuestionsState extends State<AddQuestions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,12 +23,6 @@ class _HomeState extends State<Home> {
         elevation: 0.0, //because of this the transparent effect is gone
         brightness:
             Brightness.light, //this brought back the battery indication bar
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, CreateQuiz.id);
-        },
-        child: Icon(Icons.add),
       ),
     );
   }

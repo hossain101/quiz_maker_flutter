@@ -25,13 +25,14 @@ class _SignInState extends State<SignIn> {
       setState(() {
         isLoading = true;
       });
-      await authService.signInEmailAndPassword(email, password);
-
-      setState(() {
-        isLoading = false;
+      await authService.signInEmailAndPassword(email, password).then((value) {
+        if (value != null) {
+          setState(() {
+            isLoading = false;
+          });
+          Navigator.pushReplacementNamed(context, Home.id);
+        }
       });
-
-      Navigator.pushReplacementNamed(context, Home.id);
     }
   }
 
@@ -51,7 +52,9 @@ class _SignInState extends State<SignIn> {
       ),
       body: isLoading
           ? Container(
-              child: CircularProgressIndicator(),
+              child: Center(
+                child: CircularProgressIndicator(),
+              ),
             )
           : Form(
               key: _formKey,
@@ -80,6 +83,7 @@ class _SignInState extends State<SignIn> {
                       validator: (val) {
                         return val!.isEmpty ? 'Enter a password' : null;
                       },
+                      obscureText: true,
                       decoration: InputDecoration(
                         hintText: 'Password',
                       ),
